@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- GAS - 2018-04-12- 
+		This is for the FormSpree.io email system to 
+		use the form below so that we can send emails 
+		and not have to have a backend server running -->
+	<meta name="Referrer" content="origin" />
+	<script type="text/javascript" src="Register.js"></script>
+	<!-- <script src="RegisterEmail.js"></script> -->
+	<!-- <script type="text/javascript" src="RegisterEmail-EmailJS.js"></script> -->
+	<link rel="stylesheet" href="Register.css">
+	<link rel="stylesheet" href="RegisterMobile.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+	<title>ASAP-Register</title>
+	<!-- //Need to tie this to the backend// -->
+</head>
+
+<body class="page">
+	<div class="area">
+		<div class="logoHeader">
+			<a href="ASAPhome.html">
+				<img class="logo" src="images/asapLogoWhite.png" alt="logo" id="home" />
+			</a>
+		</div>
+		<div class="h2">
+			<h2>Register</h2>
+		</div>
+		<div>
+			<form method="POST" target="_top">
+				<div class="parentf">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="38AGWG7PJZEDE">
+					<br> Parent's First name:
+					<br>
+					<input type="hidden" name="on1" value="Parent's First name">
+					<input type="text" name="os1" value="">
+				</div>
+				<div class="parentl">
+					<br> Parent's Last name:
+					<br>
+					<input type="hidden" name="on2" value="Parent's Last name">
+					<input type="text" name="os2" value="">
+				</div>
+				<div class="email">
+						<br> Email:
+						<br>
+						<input type="hidden" name="on5" value="Parent's Email">
+						<input id="email" type="email" name="os5" value="" onchange="SetFormSpreeReplyTo()">
+					</div>
+					<div class="phone">
+						Phone Number:
+						<p class="number">( eg: 706-555-1234 ) </p>
+						<input type="hidden" name="on6" value="Parent's Phone Number">
+						<input type="tel" name="os6" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####" size="20" minlength="10"
+						 maxlength="12" required>
+						<br>
+					</div>
+				<div class="childf" id="child">
+					<br> Child's First name:
+					<br>
+					<input type="hidden" name="on3" value="Child's First name">
+					<input type="text" name="os3" value="">
+					<br>
+				</div>
+				<div class="childl">
+					<br> Child's Last name:
+					<br>
+					<input type="hidden" name="on4" value="Child's Last name">
+					<input type="text" name="os4" value="">
+					<br>
+				</div>
+				<div class="length">
+					<br> Class Length:
+					<br>
+					<div>
+						<input type="hidden" name="on0" value="Class Length">
+						<input type="hidden" name="os0" value="" id="PayPalClassAmount" required>
+						<input type="radio" id="fYear" name="course" value="fYear" onclick="show1();"> Full Year ($400)
+						<br>
+						<input type="radio" id="hYear" name="course" value="hYear" onclick="show3();"> Half Year ($200)
+						<br>
+						<div id="half" class="hide" onchange="setHalfYear()">
+							<select id="halfYearSelector">
+								<option> Fall </option>
+								<option> Spring </option>
+							</select>
+							<input type="hidden" name="on7" value="Half Year Selection">
+							<input type="text" name="os7" id="PayPalHalfYear">
+						</div>
+						<input type="radio" id="month" name="course" value="month" onclick="show2();"> Month ($150)
+						<br>
+						<div id="months" class="hide" onchange="setMonth()">
+							<select id="MonthSelector">
+								<option> January </option>
+								<option> February </option>
+								<option> March </option>
+								<option> April </option>
+								<option> September </option>
+								<option> October </option>
+								<option> November </option>
+								<option> December </option>
+							</select>
+							<input type="hidden" name="on8" value="Monthly Selection">
+							<input type="hidden" name="os8" id="PayPalMonth">
+						</div>
+					</div>
+				</div>
+				<div class="school">
+					<br> Child's Middle School:
+					<br>
+					<select id="middleSchool" onchange="other(middleSchool.value);" required>
+						<option value="" disabled selected hidden> Please Select a School </option>
+						<option value="Grovetown Middle School">
+							Grovetown Middle School </option>
+						<option value="Columbia Middle School">
+							Columbia Middle School </option>
+						<option value="Greenbrier Middle School">
+							Greenbrier Middle School </option>
+						<option value="Riverside Middle School">
+							Riverside Middle School </option>
+						<option value="Evans Middle School">
+							Evans Middle School </option>
+						<option value="Other">
+							Other </option>
+					</select>
+					<br>
+					<br>
+					<div id="otherSchool" class="hide" onchange="SetPayPalSchoolText(PayPalSchool.value)">
+						<input type="hidden" name="on9" value="Child's School">
+						<input type="text" id="PayPalSchool" name="os9">
+					</div>
+
+				</div>
+				<div class="buttons">
+					<input id="PayPalRegister" formaction="https://www.sandbox.paypal.com/cgi-bin/webscr" class="button2" type="submit" value="Register & Pay Now">
+					<input class="button1" type="submit" id="EmailRegister" formaction="https://formspree.io/GasTest@yahoo.com" value="Register & Pay Later">
+					<!-- GAS - 2018-04-13 - Yep, Friday the 13th
+							FormSpree hidden fields to allow for 
+							custom email messages from the ASAP form  -->
+					<input type="hidden" name="_replyto" placeholder="To be set by JavaScript" id="formSpreeReplyTo">
+					<input type="hidden" name="_subject" value="New ASAP Registration Request!">
+					<input type="hidden" name="_cc" value="To be set by JavaScript" id="formSpreeCC">
+					<br>
+					<br>
+					<a href="ASAPhome.html" class="button3">Return to ASAP</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

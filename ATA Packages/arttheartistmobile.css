@@ -1,0 +1,258 @@
+
+body {
+background-color: #1c1c1c;
+font-family: Abel, sans-serif;
+/* box-sizing: border-box; */
+}
+.box
+{
+display: flex;
+flex-direction: column;
+align-items:center;
+}
+/* #mySidenav a {
+position: absolute;
+left: -10px;
+transition: 0.3s;
+padding: 15px;
+width: 100px;
+text-decoration: none;
+font-size: 20px;
+color: whitesmoke;
+border-radius: 0 5px 5px 0;
+text-align: center;
+margin-top: 40px;
+scroll-behavior: auto;
+
+} */
+
+.oddsection {
+background-color: #1c1c1c;
+color: whitesmoke;
+min-height: 500px;
+padding: 20px;
+width:100%;
+/* margin-left: 200px; */
+/* overflow: auto; */
+
+}
+
+.evensection {
+background-color: #1c1c1c;
+color:whitesmoke;
+min-height: 500px;
+padding: 20px;
+width:100%;
+justify-content: flex-start;
+/* margin-left: 200px; */
+/* overflow: auto; */
+}
+
+.slideshow-container {
+    width: 100%;
+    height: auto;
+    float: right;
+    position: relative;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    /* align-self:flex-end; */
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    }
+    .mySlides
+    {
+    /* justify-content: center; */
+    z-index: -1;
+    flex-wrap: nowrap;
+    max-height: 300px;
+    }
+    .images
+    {
+    align-self: center;
+    width:32.9%; 
+    max-height:300px; 
+    max-width:300px;
+    flex-wrap: nowrap;
+    }
+
+    .mySlidesMobile
+    {
+    /* justify-content: center; */
+    z-index: -1;
+    /* width:100%; */
+    max-height: 300px;
+    }
+    
+    
+    /* Next & previous buttons */
+    
+    .leftChevron
+    {
+    font-size: 2em; 
+    color:white; 
+    float:left;
+    cursor: pointer;
+    padding:4px;
+    }
+    .rightChevron
+    {
+    font-size: 2em; 
+    color:white; 
+    float:right;
+    cursor: pointer;
+    padding:4px;
+    }
+
+.rimage {
+height: 250px;
+width: 250px;
+/* margin: 20px; */
+/* vertical-align: baseline; */
+/* float: right; */
+}
+
+.limage {
+height: 250px;
+width: 250px;
+margin: 20px;
+/* vertical-align: baseline; */
+float: left;
+}
+
+.package {
+justify-content:center;
+vertical-align: bottom;
+overflow: auto;
+border: 1px solid white;
+color: whitesmoke;
+text-align: center;
+margin: 10px;
+float: left;
+min-height: 290px;
+min-width: 200px;
+padding: 10px;
+
+}
+
+.button1 {
+color: whitesmoke;
+background-color: #8a0616;
+width: auto;
+border-radius: 5px;
+border-radius: 5px;
+padding: 5px;
+border: 2px solid whitesmoke;
+}
+
+.button2 {
+color: whitesmoke;
+background-color: #6da331;
+width: auto;
+border-radius: 5px;
+padding: 5px;
+border: 2px solid whitesmoke;
+}
+
+.button3 {
+color: whitesmoke;
+background-color: #256697;
+width: auto;
+border-radius: 5px;
+border-radius: 5px;
+padding: 5px;
+border: 2px solid whitesmoke;
+}
+
+/* Used for checking spacing */
+
+.border {
+border: hotpink 2px;
+border-style: dashed;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky+.myContent {
+padding-top: 50px;
+}
+
+/* Slideshow container */
+
+
+
+.mobileSlide
+{
+display: none;
+/* visibility: hidden; */
+}
+/* Fading animation */
+
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+.text {
+font-size: 11px;
+padding: 50%;
+}
+box-sizing: border-box;
+.desktopSlide
+{
+display: none;
+}
+.mobileSlide
+{
+display:flex;
+}
+}
+
+@media screen and (max-width: 650px) {
+div#mySidenav{
+display: none;
+padding: 30%;
+box-sizing: border-box;
+}
+
+.evensection {
+padding-left: 30px;
+box-sizing: border-box;
+}
+
+.oddsection {
+padding-left: 30px;
+box-sizing: border-box;
+} 
+.desktopSlide
+{
+display: none;
+}
+.mobileSlide
+{
+display:flex;
+}
+}
+.mySlidesMobile
+{
+z-index: -1;
+max-width: 300px;
+max-height: 300px;
+}
+

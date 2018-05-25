@@ -1,0 +1,160 @@
+@media screen and (max-width: 824px) 
+{
+  /* Add a black background color to the top navigation that sticks as you scroll */
+  .mobileHeader 
+  {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    align-items: center;
+    scroll-behavior: auto;
+    position: fixed;
+    z-index: 100;
+    background: #1c1c1c;
+    /* border: hotpink 2px solid; */
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .headerLogo {
+    display: none;
+  }
+  /* This accounts for the logo and nav at the top when using anchor links */
+  span
+  {
+    display: block; 
+    content: " "; 
+    height: 140px;      
+    margin-top: -140px;   
+    visibility: hidden; 
+    pointer-events: none;
+  }
+    
+  /* changes the dimensions of the logo for mobile */
+  .logo {
+    width: 175px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  /* formats the unordered list that is the mobile nav */
+  ul.nav {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    /* width: 100%; */
+  }
+ 
+  .nav li { 
+    display:inline; 
+    font-size: .7em;
+    color: whitesmoke;
+  }
+  .home {
+    color:#256697;
+  }
+  .why {
+   color: #dd3448;
+  }
+  .learn {
+    color:#f8b700;
+  }
+  .packages {
+    color:#ff5216;
+  }
+  
+  .nav a {
+    display:inline-block;
+    padding:10px 10px 10px;
+    border-bottom:1px solid #ccc;
+    margin-bottom:-1px;
+    text-align:center;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .nav a:hover {
+    border-bottom: 1px solid #0cf;
+    cursor: pointer;
+  }
+  
+  /* prevents the links from changing color once they are visited */
+  ul.nav li a,
+  ul.nav li a:visited {
+    text-decoration: none;
+  }
+
+  /* hides the side nav */
+  .sidenav 
+  {
+    display: none;
+  }
+
+  /* Hides desktop version of the slide */
+  .desktopslideshow-container
+  {
+    display: none;
+  }
+
+  /* Mobile version of the slideshow */
+  .mobileslideshow-container 
+  {
+    width: 100%;
+    margin-top: 180px;
+    /* border: green 2px solid; */
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+ /* groups images with chevrons */
+  .mobileSlideGroup
+  {
+    display: flex;
+    align-items: center;  
+    /* border: yellow 2px solid; */
+  }
+
+/* Mobile version of the slider, only 1 image */
+  .mySlidesMobile
+  {
+    justify-content: center;
+    z-index: -1;
+    max-width: 300px;
+    height: 300px;
+  }
+
+  /* extends the section to full screen since side nav is gone*/
+  .evensection 
+  {
+    width:auto;
+    margin:15px;
+  }
+
+  /* extends the section to full screen since side nav is gone*/
+  .oddsection 
+  {
+    width:auto;
+    margin:15px;
+  } 
+
+ /* this adjusts the width of text on mobile to fill the screen */
+ .text
+ {
+    width:100%;
+ }
+
+ /* this alternates image and text in the wrap */
+ .rimage 
+ {
+   order:1;
+ }
+}
+
+
+  
